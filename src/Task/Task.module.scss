@@ -1,0 +1,119 @@
+.task{
+    padding: 20px;
+    border: 1px solid slategrey;
+    .add_panel{
+        .edit_panel{
+            display: flex;
+            height: 36px;
+            input{
+                margin-right: 10px;
+                padding-left: 4px;
+            }
+            .task_content{
+                width: 35%;
+            }
+            .task_price{
+                width: 30%;
+            }
+            .task_currency_type_select{
+                width: calc(35% - 90px);
+                margin-right: 10px;
+            }
+            .add_btn{
+                width: 60px;
+            }
+        }
+        .exchange_rate{
+            display: flex;
+            padding-left: calc(100% - 450px);
+            font-weight: 600;
+            font-size: 16px;
+            margin:10px 0;
+            span{
+                width: 150px;
+            }
+        }
+    }
+    h2{
+        text-align: left;
+    }
+    .total{
+        display: flex;
+        height: 32px;
+        margin-bottom: 20px;
+        h2{
+            width: calc(100% - 450px);
+            text-align: left;
+        }
+        span{
+            line-height: 32px;
+            width: 150px;
+        }
+    }
+    .task_list{
+        border: 2px solid gray;
+        .task_item{
+            line-height: 30px;
+            background-color: rgb(235, 235, 235);
+            display: flex;
+            justify-content: space-between;
+            
+            .content_wrap{
+                display: flex;
+                width: calc(100% - 450px);
+                .checkbox{
+                    display: inline-block;
+                    background-color: #fff;
+                    width: 18px;
+                    height: 18px;
+                    margin: 5px;
+                    border: 2px solid gray;
+                    vertical-align: middle;
+                    position: relative;
+                    input{
+                        display: none;
+                    }
+                }
+                .checked::before,.checked::after{
+                    content: "";
+                    display: inline-block;
+                    border: 1px solid #000;
+                    position: absolute;
+                }
+                .checked::before{
+                    width: 8px;
+                    transform: rotate(54deg);
+                    bottom: 5px;
+                    left: 0px;
+                }
+                .checked::after{
+                    width: 14px;
+                    transform: rotate(-53deg);
+                    bottom: 8px;
+                    right: -2px;
+                }
+                .content{
+                    text-align: right;
+                }
+                .finished{
+                    text-decoration:line-through;
+                }
+            }
+        }
+    }
+
+}
+.top_line{
+    border-top: 1px solid grey;
+}
+.price{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+.no_data{
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    color: grey;
+}
